@@ -1,5 +1,7 @@
 package com.sbb5650.forest;
 
+import android.graphics.Canvas;
+
 public class Tree {
 
     private int x;
@@ -38,4 +40,9 @@ public class Tree {
     public void setType(TreeType type) {
         this.type = type;
     }
+
+    public void draw(Canvas g) {
+        type.draw(g, x, y);
+    }
+
 }
