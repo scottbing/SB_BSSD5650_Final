@@ -13,6 +13,8 @@ import android.view.View;
 public class ForestActivity extends AppCompatActivity {
 
     DemoView demoview;
+    int TREES_TO_DRAW = 1000000;
+    int TREE_TYPES = 4;
 
     /** Called when the activity is first created. */
     @Override
