@@ -41,8 +41,6 @@ public class Tree {
         this.type = type;
     }
 
-    public void draw(Canvas g) {
-        type.draw(g, x, y);
-    }
+    public void draw(Canvas g) { type.draw(g, x, y); }
 
 }

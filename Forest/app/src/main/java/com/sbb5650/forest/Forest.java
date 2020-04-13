@@ -1,6 +1,11 @@
 package com.sbb5650.forest;
 
+import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.view.View;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +20,17 @@ public class Forest {
     }
 
     public void paint(Canvas graphics) {
+        Paint paint = new Paint();
         for (Tree tree : trees) {
-            tree.draw(graphics);
+            draw(graphics, tree.getX(), tree.getY(), tree.getType().getColor(), paint);
         }
+    }
+
+    public void draw(Canvas c, int x, int y, int color, Paint paint) {
+        //Paint paint = new Paint();
+        //paint.setColor(Color.BLACK);
+        //c.drawRect(x, y, 15, 15, paint);
+        paint.setColor(color);
+        c.drawCircle(x, y, 15, paint);
     }
 }

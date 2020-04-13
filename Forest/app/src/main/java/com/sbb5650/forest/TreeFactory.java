@@ -8,6 +8,9 @@ public class TreeFactory {
 
     static Map<String, TreeType> treeTypes = new HashMap<>();
 
+    // This illustrates the Flyweight Pattern
+    // If object already exists, return it
+    // otherwise, make new
     public static TreeType getTreeType(String name, int color, String otherTreeData) {
         TreeType result = treeTypes.get(name);
         if (result == null) {
